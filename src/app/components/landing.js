@@ -3,6 +3,7 @@ import FadeInBottomComponent from "./FadeInBottomComponent";
 import FadeInCenterComponent from "./FadeInCenterComponent";
 import FadeInLeftComponent from "./FadeInLeftComponent";
 import FadeInRightComponent from "./FadeInRightComponent";
+import FadeInUpComponent from "./FadeInUpComponent";
 import Footer from "./footer";
 import Navbar from "./navbar";
 
@@ -69,12 +70,12 @@ export default function Landing() {
         {/* start my work */}
         <div className="my-work" id="work">
           <div className="work-hero text-blue-50">
-            <h1>My Work</h1>
+           <FadeInBottomComponent><h1>My Work</h1></FadeInBottomComponent>
           </div>
           <div className="work-txt text-blue-50">
-            <p>Some Of My Best Shots :</p>
+           <FadeInLeftComponent><p>Some Of My Best Shots :</p></FadeInLeftComponent> 
           </div>
-          <div className="work-cards">
+         <FadeInUpComponent><div className="work-cards">
             {/* card */}
             <div className="work-card">
               <div className="firstAnimation">
@@ -130,13 +131,14 @@ export default function Landing() {
             </div>
             {/* card */}
           </div>
+          </FadeInUpComponent>
         </div>
         {/* end my work */}
         {/* start Contact */}
         <section className="contact py-16 shadow-inner shadow-white	 border-4	border-slate-200" id="contact">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold text-blue-50 mb-10">Get in Touch</h2>
-            <form className="max-w-md mx-auto">
+           <FadeInUpComponent><h2 className="text-3xl font-bold text-blue-50 mb-10">Get in Touch</h2></FadeInUpComponent>
+           <FadeInCenterComponent><form className="max-w-md mx-auto">
               <input
                 type="text"
                 className="w-full bg-gray-950 p-3 mb-4 rounded contact-msg"
@@ -156,6 +158,7 @@ export default function Landing() {
                 Send Message
               </button>
             </form>
+            </FadeInCenterComponent>
           </div>
         </section>
         {/* end Contact */}
